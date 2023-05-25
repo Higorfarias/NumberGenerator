@@ -6,5 +6,9 @@ button.addEventListener('click', function() {
 
     let result = Math.floor(Math.random() * (max - min + 1)) + min;
 
+    if(isNaN(result)) {
+        result = 'Informe um valor';
+    }
+
     document.querySelector('#result > span').textContent = result;
 });
